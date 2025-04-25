@@ -18,7 +18,10 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+     origin: [
+    'https://exquisite-kitsune-093e2a.netlify.app', // Your Netlify domain
+    'http://localhost:3000', // For local development
+  ],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
